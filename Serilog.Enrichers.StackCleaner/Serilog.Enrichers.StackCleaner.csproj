@@ -5,7 +5,27 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<LangVersion>10</LangVersion>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<Authors>DiFFoZ</Authors>
+	<Description>Clears up stack traces to make them much more readable during debugging.</Description>
+	<PackageProjectUrl>https://github.com/DiFFoZ/Serilog.Enrichers.StackCleaner</PackageProjectUrl>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<RepositoryUrl>https://github.com/DiFFoZ/Serilog.Enrichers.StackCleaner</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+	<PackageTags>serilog enricher serilog-enricher</PackageTags>
+	<PackageIconUrl>https://cdn.jsdelivr.net/gh/serilog-contrib/brand/logo/enricher/serilog-enricher-nuget.png</PackageIconUrl>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+	<IncludeSymbols>True</IncludeSymbols>
+	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="DanielWillett.StackCleaner" Version="1.3.0" />
