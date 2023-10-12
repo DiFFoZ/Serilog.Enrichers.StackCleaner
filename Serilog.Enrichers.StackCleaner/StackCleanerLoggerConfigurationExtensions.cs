@@ -19,7 +19,8 @@ public static class StackCleanerLoggerConfigurationExtensions
         bool includeILOffset = false,
         bool includeLineData = true,
         bool includeFileData = false,
-        bool useTypeAliases = true)
+        bool useTypeAliases = true,
+        StackColorFormatType colorFormatting = StackColorFormatType.None)
     {
         var configuration = new StackCleanerConfiguration
         {
@@ -30,7 +31,8 @@ public static class StackCleanerLoggerConfigurationExtensions
             IncludeILOffset = includeILOffset,
             IncludeLineData = includeLineData,
             IncludeFileData = includeFileData,
-            UseTypeAliases = useTypeAliases
+            UseTypeAliases = useTypeAliases,
+            ColorFormatting = colorFormatting
         };
 
         return enrichmentConfiguration.WithStackCleaner(configuration);
